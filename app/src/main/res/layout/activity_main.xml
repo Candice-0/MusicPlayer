@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#BEB3B3">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:background="?attr/homeAsUpIndicator"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/song_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:background="@android:color/transparent"
+            android:layout_toRightOf="@+id/back"/>
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/needle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/needle" />
+
+
+    <ImageView
+        android:id="@+id/disk"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/disk" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/play_tools"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/disk"
+        android:layout_marginTop="120dp"
+        android:layout_height="wrap_content">
+        <!--<Button-->
+        <!--android:id="@+id/play_style"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:hint="播放类型"-->
+        <!--android:background="@android:color/transparent"-->
+        <!--/>-->
+        <ImageView
+
+            android:id="@+id/b_last"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="61dp"
+            android:layout_marginLeft="61dp"
+            android:layout_marginTop="0dp"
+            android:background="@android:drawable/ic_media_previous"
+            android:textColor="#FFF" />
+
+
+        <TextView
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="-20dp"
+            android:background="@drawable/button_music"
+            android:hint="方式"
+            android:textColor="#FFF" />
+
+        <ImageView
+            android:id="@+id/b_start"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-30dp"
+            app:srcCompat="@android:drawable/ic_media_play" />
+
+        <ImageView
+            android:id="@+id/b_next"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@+id/b_start"
+            android:background="@android:drawable/ic_media_next"
+            android:textColor="#FFF" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/seekBar_tools"
+        android:layout_above="@+id/play_tools"
+        android:layout_marginBottom="-50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:id="@+id/time_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="right"
+            android:hint="            "/>
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:max="200" />
+
+        <TextView
+            android:layout_toRightOf="@+id/seek_bar"
+            android:id="@+id/time_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:hint="         " />
+
+
+        <ImageView
+            android:id="@+id/add_item"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@android:drawable/btn_star_big_on" />
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
